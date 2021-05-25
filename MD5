@@ -1,0 +1,14 @@
+a12928364dea72b6ebedc33708a2a7da *DESCRIPTION
+2453af2af0ba888fb1dcdb93f8faa52a *NAMESPACE
+87f2d9977314b30dec3be9b2c132708c *R/get_assets.R
+e635820157edaaf04eb9b391af44a7eb *R/get_exchanges.R
+5ccff33eebe49587cfb4504b5bb9cb2f *R/get_markets.R
+e384e0c8ed7b9862528de4ec4d6b1a32 *R/get_pairs.R
+5404c8522bdf723469318942aa80cc32 *R/markets.R
+09182e0711925d9e481ebf5c313e1f9f *R/utils-get_cryptowatch_url.R
+ee3bd306df5bc585312577852d236599 *R/utils-get_data.R
+ceb28cbfa6d32d2467b7cb1351d701b3 *man/get_assets.Rd
+a473b3eb70f9c16533bc77d1d1fb27b3 *man/get_exchanges.Rd
+2fc023d7639efed3d2c8d3f32bfdb643 *man/get_markets.Rd
+e9c7eb079218aa879b17d8d103624c0c *man/get_pairs.Rd
+9b788d348bc40872e21abb71a0deb700 *man/markets.Rd
