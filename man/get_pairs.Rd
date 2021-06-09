@@ -4,21 +4,27 @@
 \alias{get_pairs}
 \title{Get pair of currencies}
 \usage{
-get_pairs(pair = NULL)
+get_pairs(pair = NULL, api_key = NULL, allowance = FALSE)
 }
 \arguments{
-\item{pair}{A string containing a pair symbol, e.g. \emph{btcusd}. Optional argument.}
+\item{pair}{A string containing a pair symbol, e.g. \emph{btcusd} (optional argument). Run \code{get_pairs()} to get all available pairs of currencies.}
+
+\item{api_key}{A string containing the API key. See \url{https://docs.cryptowat.ch/rest-api/rate-limit} to learn how to create an account and how to generate an API key.}
+
+\item{allowance}{A logical (default is \code{FALSE}). If \code{TRUE} the function returns a list which includes allowance information, i.e. cost of the request, remaining credits and your account name.}
 }
 \value{
-data A list or data.frame containing pair data.
+A list or data.frame containing data on pairs.
 }
 \description{
 Get details on pairs of (crypto)currencies.
 }
 \examples{
 \dontrun{
-btcusd.data <- get_pairs("btcusd")
+# Get all available pairs of currencies
 df.pairs <- get_pairs()
+# Get details on the pair Bitcoin-USD
+pair.btcusd <- get_pairs("btcusd")
 }
 
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/markets.R
 \name{markets}
 \alias{markets}
-\title{Get prices for cryptocurrencies}
+\title{Get prices of cryptocurrencies}
 \usage{
 markets(pair, params = NULL, exchange = "kraken", route = "ohlc", datetime = TRUE)
 }
@@ -11,24 +11,24 @@ markets(pair, params = NULL, exchange = "kraken", route = "ohlc", datetime = TRU
 
 \item{params}{A list containing \code{before}, \code{after} and \code{periods} (optional). See \url{https://docs.cryptowat.ch/rest-api/markets/ohlc} for further information.}
 
-\item{exchange}{A string containing the exchange. Default is \emph{kraken}.}
+\item{exchange}{A character string containing the exchange. Default is \emph{kraken}.}
 
-\item{route}{A string containing market prices. Possible values: \emph{price, trades, summary, orderbook, ohlc}. Default is \emph{ohlc}.}
+\item{route}{A character string containing the route. Default is \emph{ohlc}.}
 
 \item{datetime}{A logical. \code{TRUE} indicates that datetime type is used. \code{FALSE} indicates \emph{unix timestamp}. Default is \code{TRUE}.}
 }
 \value{
-df.data A data.frame containing price data for a given pair of currencies.
+A data.frame containing OHLC candlestick prices of a given pair of currencies.
 }
 \description{
-Get data.frame with prices for cryptocurrencies using the REST API of cryptowat.ch.
+Get data.frame with prices of cryptocurrencies using the REST API of cryptowat.ch.
 }
 \examples{
 \dontrun{
-df.btcusd.data <- markets("btcusd")
-df.btcusd.data2 <- markets("btcusd", list(periods = 3600, before = 1609851600,
+df.ohlc.hourly <- markets("btcusd")
+df.ohlc.hourly2 <- markets("btcusd", list(periods = 3600, before = 1609851600,
                                           after = 1609506000), datetime = FALSE)
-df.btceur.data3 <- markets("btceur", list(periods = 86400, before = "2021-05-12",
+df.ohlc.daily <- markets("btceur", list(periods = 86400, before = "2021-05-12",
                                           after = "2021-01-01"), datetime = TRUE)
 }
 
